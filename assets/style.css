@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Manrope:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
+  background-position: bottom right;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  z-index: -1;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Lumanosimo", cursive;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  padding-top: 15px;
+  transition: all 0.5s;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav h3 {
+  font-family: "Lumanosimo", cursive;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+nav h3 i {
+  display: none;
+}
+nav .links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+nav .links details div {
+  background-color: wheat;
+  position: absolute;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1;
+}
+
+nav .links details div a {
+  padding: 5px;
+  text-decoration: underline;
+}
+
+nav .links a {
+  opacity: 90%;
+  color: black;
+  font-weight: bold;
+}
+
+nav .links a:hover {
+  opacity: 100%;
+  border-bottom: 1px solid orange;
+}
+
+nav .login {
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 5px 20px;
+}
+
+nav .login:hover {
+  color: orange;
+  border: 1px solid orange;
+}
+
+nav h3  img{
+  width: 100px;
+  
+}
+
+/* main */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+main h1 {
+  max-width: 600px;
+  position: relative;
+  top: -100px;
+  font-size: 40px;
+  margin-left: 150px;
+  letter-spacing: 1px;
+  font-family: "Lumanosimo", cursive;
+  font-weight: lighter;
+}
+
+main h1 span {
+  color: #ffbb17;
+}
+main p {
+  position: relative;
+  top: -90px;
+  margin-left: 150px;
+}
+main p .explore {
+  background-color: #ffbb17;
+  padding: 17px 40px;
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 30px;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-position: 150px 0;
+  }
+
+  main h1 {
+    margin-left: 0;
+    max-width: 550px;
+    font-size: 38px;
+  }
+  main p {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-position: 130px 100px;
+  }
+  nav .links {
+    position: fixed;
+    background-color: wheat;
+    width: calc(100vw - 40px);
+    height: 100vh;
+    z-index: 3;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    right: -150vw;
+    transition: 0.5s;
+  }
+  nav h3 i {
+    display: block;
+  }
+
+  nav .links .close {
+    background-color: rgba(255, 0, 0, 0.349);
+  }
+  nav .links a {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+
+  main {
+    text-align: center;
+  }
+
+  main h1 {
+    top: -50px;
+  }
+
+  main p {
+    top: -40px;
+    width: 100%;
+  }
+
+  main p .explore {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+}
